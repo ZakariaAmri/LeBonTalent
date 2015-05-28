@@ -1,0 +1,6 @@
+﻿Pour lancer mon application, il faut :
+- eclipse 
+- Java 1.8
+- Google app engine plug-in 1.9.19
+
+Lancer le projet en tant que Web Application .

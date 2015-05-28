@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+<!-- Objecify -->
+	<filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+	</filter>
+	<filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>result</servlet-name>
+		<servlet-class>servlet.result</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>result</servlet-name>
+		<url-pattern>/result</url-pattern>
+	</servlet-mapping>
+<!-- Servlet -->
+	<!-- Utilisateur -->
+		<!-- Inscription -->
+	<servlet>
+		<servlet-name>inscription</servlet-name>
+		<servlet-class>servlet.Inscription</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>inscription</servlet-name>
+		<url-pattern>/inscription</url-pattern>
+	</servlet-mapping>
+		<!-- Profil -->
+	<servlet>
+		<servlet-name>profil</servlet-name>
+		<servlet-class>servlet.Profil</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>profil</servlet-name>
+		<url-pattern>/profil</url-pattern>
+	</servlet-mapping>
+		<!-- Connexion -->
+	<servlet>
+		<servlet-name>connexion</servlet-name>
+		<servlet-class>servlet.Connexion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>connexion</servlet-name>
+		<url-pattern>/connexion</url-pattern>
+	</servlet-mapping>
+	<!-- Annonce -->
+	<!-- Demande -->
+		<!-- Nouvelle Demande -->
+	<servlet>
+		<servlet-name>demande</servlet-name>
+		<servlet-class>servlet.NouvelleDemande</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>demande</servlet-name>
+		<url-pattern>/demande</url-pattern>
+	</servlet-mapping>
+		<!-- Afficher Toutes les demandes -->
+	<servlet>
+		<servlet-name>alldemande</servlet-name>
+		<servlet-class>servlet.ToutesDemandes</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>alldemande</servlet-name>
+		<url-pattern>/alldemande</url-pattern>
+	</servlet-mapping>
+		<!-- Afficher une demande -->
+	<servlet>
+		<servlet-name>demandedetails</servlet-name>
+		<servlet-class>servlet.DemandeDetail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>demandedetails</servlet-name>
+		<url-pattern>/demandedetails</url-pattern>
+	</servlet-mapping>
+	<!-- toutes les annonces -->
+	<servlet>
+		<servlet-name>allannonce</servlet-name>
+		<servlet-class>servlet.ToutesAnnonces</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>allannonce</servlet-name>
+		<url-pattern>/allannonce</url-pattern>
+	</servlet-mapping>
+		<!-- Commentaire -->
+		<servlet>
+		<servlet-name>addCommentaire</servlet-name>
+		<servlet-class>servlet.CommentaireD</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addCommentaire</servlet-name>
+		<url-pattern>/addCommentaire</url-pattern>
+	</servlet-mapping>
+		<!-- Search -->
+	<servlet>
+		<servlet-name>searchd</servlet-name>
+		<servlet-class>servlet.SearchD</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>searchd</servlet-name>
+		<url-pattern>/searchd</url-pattern>
+	</servlet-mapping>
+		<!-- Suppresion -->
+	<servlet>
+		<servlet-name>deleteD</servlet-name>
+		<servlet-class>servlet.SuppDemande</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteD</servlet-name>
+		<url-pattern>/deleteD</url-pattern>
+	</servlet-mapping>
+	<!-- Commentaire -->
+	<servlet>
+		<servlet-name>com</servlet-name>
+		<servlet-class>servlet.CommentaireD</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>com</servlet-name>
+		<url-pattern>/com</url-pattern>
+	</servlet-mapping>
+		<!-- Modification -->
+	<servlet>
+		<servlet-name>modificationD</servlet-name>
+		<servlet-class>servlet.ModifDemande</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>modificationD</servlet-name>
+		<url-pattern>/modificationD</url-pattern>
+	</servlet-mapping>
+<!--Param -->	
+	<init-param>
+		<param-name>refForSupDem</param-name> 
+	</init-param>
+	<init-param>
+		<param-name>refDemande</param-name> 
+	</init-param>
+<!-- Index file -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
